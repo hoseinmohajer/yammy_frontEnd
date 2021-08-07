@@ -62,6 +62,9 @@ const Categories = ({ titleLess }: {titleLess?: boolean | undefined}) => {
       }}
       onClick={() => onClick} />;
   };
+  const myLoader = ({ src, width, quality }: {src: string | undefined; width: number | undefined; quality?: number | undefined}) => {
+    return `http://localhost:3001/${src}?w=${width}&q=${quality || 75}`
+  }
   return (
     <section className="resip_section">
       <div className="container">
@@ -95,10 +98,11 @@ const Categories = ({ titleLess }: {titleLess?: boolean | undefined}) => {
                         <ImageWrapper>
                         <Image
                           className='image-wrapper'
+                          loader={myLoader}
+                          src={category.image.path}
+                          alt={category.title}
                           width={214}
                           height={212}
-                          src={`http://localhost:3001/${category.image.path}`}
-                          alt={category.title}
                         />
                         </ImageWrapper>
                         <div style={{marginTop: '16px'}}>

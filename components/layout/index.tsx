@@ -26,8 +26,8 @@ const MainLayout: FunctionComponent = ({ children }: { children: ReactElement })
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
-        <Script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"/>
-        <Script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"/>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"/>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"/>
       </Head>
       <div className="main-layout">
         <div className="wrapper">
@@ -39,13 +39,13 @@ const MainLayout: FunctionComponent = ({ children }: { children: ReactElement })
           </div>
         </div>
         <div className="overlay" />
-        <Script src="/js/jquery.min.js"/>
-        <Script src="/js/popper.min.js"/>
-        <Script src="/js/bootstrap.bundle.min.js"/>
-        <Script src="/js/custom.js"/>
-        <Script src="/js/jquery.mCustomScrollbar.concat.min.js"/>
-        <Script src="/js/jquery-3.0.0.min.js"/>
-        <Script src="/js/scripts.js"/>
+        <script src="/js/jquery.min.js"/>
+        <script src="/js/popper.min.js"/>
+        <script src="/js/bootstrap.bundle.min.js"/>
+        <script src="/js/custom.js"/>
+        <script src="/js/jquery.mCustomScrollbar.concat.min.js"/>
+        <script src="/js/jquery-3.0.0.min.js"/>
+        <script src="/js/scripts.js"/>
         <link rel="stylesheet" href="/css/custom.css" />
       </div>
     </>
