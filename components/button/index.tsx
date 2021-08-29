@@ -23,22 +23,22 @@ import { ButtonWrapper } from './style';
  * */
 
 interface ButtonInterface {
-	children: React.ReactComponentElement<any>,
+	children: React.ReactComponentElement<any> | string,
 	type: string;
-	onClick: () => boolean;
+	onClick: () => boolean | any;
 	size: string;
-	loading: boolean;
-	disabled: boolean | undefined;
+	loading?: boolean;
+	disabled?: boolean;
 }
 const Button = (props: ButtonInterface) => {
 	const { children, type, onClick, size, loading = false, disabled } = props;
 	return (
 		<ButtonWrapper
-			// isDisabled={'disabled'}
+			isDisabled={disabled}
 			onClick={disabled || loading ? () => false : onClick}
 			className={`no-select`}
-			// type={type}
-			// size={size}
+			type={type}
+			size={size}
 		>
 			{loading ? (
 				<div>

@@ -5,13 +5,18 @@ interface TypeInterface {
 	type: string
 }
 interface DisableInterface {
-	isDisabled: boolean
+	isDisabled?: boolean
 }
 interface SizeInterface {
 	size: string
 }
 // @ts-ignore: Unreachable code error
-export const ButtonWrapper = styled.div`
+interface ButtonWrapperInterface {
+	isDisabled?: boolean;
+	type: string;
+	size: string;
+}
+export const ButtonWrapper = styled.div<ButtonWrapperInterface>`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -39,7 +44,7 @@ export const ButtonWrapper = styled.div`
 			`;
 		}
 	}};
-	${({isDisabled = false}: DisableInterface) => {
+	${({isDisabled}: DisableInterface) => {
 		return `
 			opacity: ${isDisabled ? .5 : 1};
 			cursor: ${isDisabled ? 'not-allowed' : 'pointer'}
